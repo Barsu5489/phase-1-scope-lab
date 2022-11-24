@@ -2,12 +2,12 @@
   "stats": {
     "suites": 6,
     "tests": 5,
-    "passes": 5,
+    "passes": 4,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-11-24T20:50:26.832Z",
-    "end": "2022-11-24T20:50:27.160Z",
-    "duration": 328
+    "failures": 1,
+    "start": "2022-11-24T21:41:04.142Z",
+    "end": "2022-11-24T21:41:04.515Z",
+    "duration": 373
   },
   "tests": [
     {
@@ -22,7 +22,13 @@
       "fullTitle": "Fix the Scope upperCaseCustomerName() modifies the customerName variable",
       "duration": 0,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected 'bob' to equal 'BOB'",
+        "showDiff": true,
+        "actual": "bob",
+        "expected": "BOB",
+        "stack": "AssertionError: expected 'bob' to equal 'BOB'\n    at Context.<anonymous> (test/indexTest.js:14:38)\n    at processImmediate (node:internal/timers:466:21)"
+      }
     },
     {
       "title": "setBestCustomer",
@@ -47,18 +53,25 @@
     }
   ],
   "pending": [],
-  "failures": [],
+  "failures": [
+    {
+      "title": "modifies the customerName variable",
+      "fullTitle": "Fix the Scope upperCaseCustomerName() modifies the customerName variable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 'bob' to equal 'BOB'",
+        "showDiff": true,
+        "actual": "bob",
+        "expected": "BOB",
+        "stack": "AssertionError: expected 'bob' to equal 'BOB'\n    at Context.<anonymous> (test/indexTest.js:14:38)\n    at processImmediate (node:internal/timers:466:21)"
+      }
+    }
+  ],
   "passes": [
     {
       "title": "returns the customerName",
       "fullTitle": "Fix the Scope declare customerName to be bob in global scope returns the customerName",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "modifies the customerName variable",
-      "fullTitle": "Fix the Scope upperCaseCustomerName() modifies the customerName variable",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
